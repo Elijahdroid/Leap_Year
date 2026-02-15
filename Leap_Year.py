@@ -2,9 +2,11 @@ def Leap_Year_Check(year, revenue):
     if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
              if revenue > 1000000 :
                 print("Platinum Year")
-             if year % 400 == 0:
+             elif year % 400 == 0:
                 if revenue < 500000:
                     print("Redistribution Year")
+             else:
+                 print("Standard Cycle")
     else:
         y = str(year)
         r = str(revenue)
@@ -12,8 +14,9 @@ def Leap_Year_Check(year, revenue):
         last_2_digits_r = r[len(r)-2] + r[len(r)-1]
         if int(last_2_digits_y) != 0:
             if int(last_2_digits_r) % int(last_2_digits_y) == 0:
-                print("Secular Anomaly")
-print("Standard Cycle")
+                print("Statistical Anomaly")
+        else:
+            print("Standard Cycle")
 
 
 
